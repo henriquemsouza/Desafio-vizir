@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   {% block title %}<title>Telzir | Cadastro</title>{% endblock %}
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+   {% block head%}
+   {% endblock %}
+   {% load staticfiles %}
+   <link rel="stylesheet"  type="text/css" href="{% static 'telzirEstilo/style.css' %}" />
+</head>
+{% load static %}
+<body class = "bodyhome">
+
+
+<br>
+<br>
+              <div class = "msgOne">
+                    <br>
+                        {% if registered %}
+                        <div class="navbar">
+                                        <a href="{% url 'index' %}">Home</a>
+                                        <a href="{% url 'tarifa' %}">Calcular tarifa</a>
+                                        <a href="{% url 'login' %}">Logar</a>
+                                        <a href="{% url 'register' %}">Cadastro</a>
+                                        <a href="{% url 'contato' %}">Contato</a>
+                                        <a href="{% url 'about' %}" >About</a>
+                                        <a href="{% url 'planoextra' %}">Planos</a>
+                                        <a href="{% url 'logout' %}">Logout</a>
+                        
+                                </div>
+                        Successo: <strong>Obrigado por se cadastar</strong>
+                        <a href="{% url 'index' %}>"Return to the homepage.</a><br />
+                        {% else %}
+                        <div class="navbar">
+                                        <a href="{% url 'index' %}">Home</a>
+                                        <a href="{% url 'tarifa' %}">Calcular tarifa</a>
+                                        <a href="{% url 'login' %}">Logar</a>
+                                        <a href="{% url 'register' %}">Cadastro</a>
+                                        <a href="{% url 'contato' %}">Contato</a>
+                                        <a href="{% url 'about' %}" >About</a>
+                                </div>
+                        Oi,<strong>cadastre-se para ter mais conteudo!</strong><br />
+                        <br>
+              </div>
+                
+                        <form id="user_form" method="post" action="{% url "register" %}"  enctype="multipart/form-data">
+                
+                            {% csrf_token %}
+                
+                            {{ user_form.as_p }}
+                        
+                
+                            <!-- Provide a button to click to submit the form. -->
+                            <input type="submit" name="submit" value="Register" />
+                            
+                        </form>
+                        {% endif %}
+
+
+</body>
+</html>

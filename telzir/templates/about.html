@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   {% block title %}<title>Telzir | about</title>{% endblock %}
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+   {% block head%}
+   {% endblock %}
+   {% load staticfiles %}
+   <link rel="stylesheet"  type="text/css" href="{% static 'telzirEstilo/style.css' %}" />
+</head>
+{% load static %}
+<body class = "bodyhome">
+                {% if user.is_authenticated %}
+        <div class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'tarifa' %}">Calcular tarifa</a>
+                <a href="{% url 'login' %}">Logar</a>
+                <a href="{% url 'register' %}">Cadastro</a>
+                <a href="{% url 'contato' %}">Contato</a>
+                <a href="{% url 'about' %}" >About</a>
+                <a href="{% url 'planoextra' %}">Planos</a>
+                <a href="{% url 'logout' %}">Logout</a>
+        </div>
+        <br>
+        <br> 
+      <div class ="aboutT"> 
+        <h1>Oi {{ user.username }} esse site é um desafio tecnico da Vizir<h1>
+        <h3>Site desenvolvido por Henrique martins de souza.</h3>
+                             <h3>Para saber sobre Henrique</h3>
+                             <a href="https://henriquemsouza.github.io"target="_blank" >
+                              <button id="btnLOG" >Saiba mais</button>
+                        </a>
+                      </div>
+      
+              {% else %}
+              <div class="navbar">
+                        <a href="{% url 'index' %}">Home</a>
+                        <a href="{% url 'tarifa' %}">Calcular tarifa</a>
+                        <a href="{% url 'login' %}">Logar</a>
+                        <a href="{% url 'register' %}">Cadastro</a>
+                        <a href="{% url 'contato' %}">Contato</a>
+                        <a href="{% url 'about' %}" >About</a>
+              </div>
+              <br>
+              <br> 
+            <div class ="aboutT"> 
+              <h1>Oi esse site é um desafio tecnico da Vizir<h1>
+              <h3>Site desenvolvido por Henrique martins de souza.</h3>
+                                   <h3>Para saber sobre Henrique</h3>
+                                   <a href="https://henriquemsouza.github.io"target="_blank" >
+                                    <button id="btnLOG" >Saiba mais</button>
+                              </a>
+                            </div>
+
+                 {% endif %}
+
+<br>
+                
+</body>
+</html>

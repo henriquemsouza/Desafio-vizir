@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   {% block title %}<title>Telzir | Login</title>{% endblock %}
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+   {% block head%}
+   {% endblock %}
+   {% load staticfiles %}
+   <link rel="stylesheet"  type="text/css" href="{% static 'telzirEstilo/style.css' %}" />
+</head>
+{% load static %}
+<body class = "bodyhome">
+
+        <div class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'tarifa' %}">Calcular tarifa</a>
+                <a href="{% url 'login' %}">Logar</a>
+                <a href="{% url 'register' %}">Cadastro</a>
+                <a href="{% url 'contato' %}">Contato</a>
+                <a href="{% url 'about' %}" >About</a>
+              </div>
+
+  
+                    <form id="login_form" method="post" action="{% url "login" %}">
+                        {% csrf_token %}
+                        <div>
+                        <p> 
+                         <input type="text" name="username" value="" size="50" placeholder="Usuario"/>
+                        </p>
+                        <br />
+                        </div>
+                        <div>
+                        <p>
+                          <input type="password" name="password" value="" size="50" placeholder="Senha"/>
+                        </p>
+                        </div>
+                        <br />
+                        <br />
+                        <input  id="btnLOG" type="submit" value="logar" />
+                        <br>
+                    </form>
+         
+
+
+</body>
+</html>

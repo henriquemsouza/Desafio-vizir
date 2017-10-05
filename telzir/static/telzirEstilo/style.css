@@ -1,0 +1,215 @@
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.8;           /*determines transparency value*/ 
+  filter:(opacity=50); 
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar a:hover {
+	float: left;
+	display: block;
+	color: #030202;
+	background-color:white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  .bodyhome
+  {
+	  background-image:url('https://github.com/henriquemsouza/images/blob/master/img1.jpg?raw=true'); 
+	  background-repeat:no-repeat; 
+	  background-size:cover;
+	  background-attachment:fixed;
+  }
+#botao {
+    background-color: white; 
+	color: black;
+	padding: 15px 32px; 
+	border: 2px solid #06022B;	
+	position: relative;
+}
+#botao:hover {
+    background-color: #06022B;
+    color: white;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.mtable
+{
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.btnc
+{
+	position: absolute;
+	left: 45%;
+	top: 70%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+th
+{
+	background: #060505;
+	color: white;
+}
+select{
+	background: white;
+	color: black;
+}
+.tartitle{
+	
+	border-bottom: 3px solid #222222;
+	color: black;
+	font-weight: bold;
+	text-align: center;
+	
+}
+.tarmsg
+{
+	text-align: center;
+}
+#user_form
+{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: white;
+	opacity: 0.9;           /*determines transparency value*/ 
+	filter:(opacity=50);
+}
+.msgOne
+{
+	color:white;
+	text-align: center;
+}
+
+.wl
+{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-size: 60px;
+	color:white;
+	background: #080000;
+	opacity: 0.9;           /*determines transparency value*/ 
+	filter:(opacity=50);
+}
+#contato_form
+{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+    width: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	background: white;
+	opacity: 0.9;           /*determines transparency value*/ 
+	filter:(opacity=50);
+    text-align: center;
+}
+#msgfo
+{
+	width: 300px;
+	height:150px 
+}
+#mbox
+{
+	width: 300px;
+	height: 50px
+}
+
+#btnEN {
+    background-color: white; 
+	color: black;
+	padding: 15px 32px; 
+	border: 2px solid #06022B;	
+	position: relative;
+}
+#btnEN:hover {
+    background-color: #06022B;
+    color: white;
+}
+#btnLOG{
+    background-color: #06022B;	
+	color: white;
+	padding: 15px 32px; 
+	border: 2px solid #06022B;	
+	position: relative;
+}
+#btnLOG:hover {
+	background-color: white; 
+	color: black;  
+}
+#login_form{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: white;
+	opacity: 0.9;           /*determines transparency value*/ 
+	filter:(opacity=50);
+	text-align: center;
+	width: 50%;
+}
+.madelist{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: #060505;
+	opacity: 0.9;           /*determines transparency value*/ 
+	filter:(opacity=50);
+	text-align: center;
+
+	color: white;
+}
+
+
+.aboutT{
+	color: white;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: #060505;
+	opacity: 0.9;           /*determines transparency value*/ 
+	filter:(opacity=50);
+	text-align: center;
+}
+.msgll{
+	text-align:  center;
+	color:white;
+	background: #080000;
+	opacity: 0.9;           /*determines transparency value*/ 
+	filter:(opacity=50);
+}

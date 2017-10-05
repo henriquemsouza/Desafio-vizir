@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   {% block title %}<title>Telzir | Tarifa</title>{% endblock %}
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+   {% block head%}
+   {% endblock %}
+   {% load staticfiles %}
+   <link rel="stylesheet"  type="text/css" href="{% static 'telzirEstilo/style.css' %}" />
+   <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+</head>
+{% load static %}
+<body class = "bodyTarifa" >
+
+        <div class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'tarifa' %}">Calcular tarifa</a>
+                <a href="{% url 'login' %}">Logar</a>
+                <a href="{% url 'register' %}">Cadastro</a>
+                <a href="{% url 'contato' %}">Contato</a>
+                <a href="{% url 'about' %}" >About</a>
+              </div>
+<br>
+<br>
+<div class = "tartitle">
+    <h1>Saiba quanto voce vai pagar na  ligação<h1>
+</div>
+<div class ="tarmsg">
+    <h4>Selecione  o DDD de origem e o DDD de destino e  informe a duração da lição e não se esqueça de
+        informa qual  o seu <strong>plano.</strong>
+</div>
+<div class ="mtable">
+
+              <table style="width:80%">
+                
+                <tr>
+                  <th>Origem</th>
+                  <th>Destino</th>
+                  <th>Tempo/min</th>
+                  <th>Plano</th>
+                  <th>Com FaleMais</th>
+                  <th>Sem FaleMais</th>
+                </tr>
+                <tr>
+                  <td>
+            
+                      <select id="origem">
+                          <option value="011">011</option>
+                          <option value="016">016</option>
+                          <option value="017">017</option>
+                          <option value="018">018</option>
+                      </select>
+                  
+                  </td>
+                  <td>
+                      <select id="destino">
+                          <option value="011">011</option>
+                          <option value="016">016</option>
+                          <option value="017">017</option>
+                          <option value="018">018</option>
+                      </select>
+                
+                  </td>
+                  <td>
+                      <input id="tempo" type="number" min="0"></label>
+                  </td>
+                  <td>
+                          <select id="plano">
+                          <option value="30">30</option>
+                          <option value="60">60</option>
+                          <option value="120">120</option>
+                      </select>
+                  </td>
+                  <td>
+                    <p id="ComFalemais"></p>
+                  </td>
+                  <td>
+                    <p id="SemFalemais"></p>
+                  </td>
+                </tr>
+              
+              </table>
+              
+
+        </div>
+                            
+                  
+        <div class = "btnc"> 
+            <button id="botao" type="button" onclick="calck()">Calcular!</button>
+      </div>
+</body>
+</html>

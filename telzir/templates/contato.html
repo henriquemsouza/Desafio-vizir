@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   {% block title %}<title>Telzir | Contato</title>{% endblock %}
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+   {% block head%}
+   {% endblock %}
+   {% load staticfiles %}
+   <link rel="stylesheet"  type="text/css" href="{% static 'telzirEstilo/style.css' %}" />
+</head>
+{% load static %}
+<body class = "bodyhome">
+
+              <div class="navbar">
+                        <a href="{% url 'index' %}">Home</a>
+                        <a href="{% url 'tarifa' %}">Calcular tarifa</a>
+                        <a href="{% url 'login' %}">Logar</a>
+                        <a href="{% url 'register' %}">Cadastro</a>
+                        <a href="{% url 'contato' %}">Contato</a>
+                        <a href="{% url 'about' %}" >About</a>
+              </div>      
+       
+<br>
+                <form  id="contato_form" method="POST" class="post-form">
+        <h4>Entre em contato com a nossa equipe<h4>
+                    {% csrf_token %}
+           
+                    <div>
+                   <p>{{ form.nome }}</p>
+                </div>  
+                <div>
+                   <p> {{ form.telefone }}</p>
+                    </div>
+                        <div>
+                  <p>{{ form.mensagem }}</p>
+                </div>
+
+                    <input id="btnEN" type="submit" name="submit" value="ENVIAR" />
+                    
+                </form> 
+                
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   {% block title %}<title>Telzir | Planos</title>{% endblock %}
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+   {% block head%}
+   {% endblock %}
+   {% load staticfiles %}
+   <link rel="stylesheet"  type="text/css" href="{% static 'telzirEstilo/style.css' %}" />
+     {% load render_table from django_tables2 %}
+</head>
+{% load static %}
+<body class = "bodyhome">
+                {% if user.is_authenticated %}
+        <div class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'tarifa' %}">Calcular tarifa</a>
+                <a href="{% url 'login' %}">Logar</a>
+                <a href="{% url 'register' %}">Cadastro</a>
+                <a href="{% url 'contato' %}">Contato</a>
+                <a href="{% url 'about' %}" >About</a>
+                <a href="{% url 'logout' %}">Logout</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class = "tartitle">
+                <h1>Conheça  nossos  planos<h1>
+        </div>
+        <div class = "madelist">
+               <p>{% render_table plano %}</p>
+        </div>
+        
+              {% else %}
+              <div class="navbar">
+                        <a href="{% url 'index' %}">Home</a>
+                        <a href="{% url 'tarifa' %}">Calcular tarifa</a>
+                        <a href="{% url 'login' %}">Logar</a>
+                        <a href="{% url 'register' %}">Cadastro</a>
+                        <a href="{% url 'contato' %}">Contato</a>
+                        <a href="{% url 'about' %}" >About</a>
+              </div>      
+              <h1 class="wl">Entre na sua conta para ver  o conteudo<h1>   
+                 {% endif %}
+
+<br>
+                
+</body>
+</html>
