@@ -20,7 +20,9 @@ virtualenv <venvs_path>/vyenv/ -p python2.7
  ```
  
 3. Clone o repositorio
-
+ ```
+git clone https://github.com/henriquemsouza/Desafio-vizir.git
+ ```
  
  4. Ative sua virtualenv :
  ```
